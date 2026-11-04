@@ -1,0 +1,41 @@
+:root{
+    --color-primary: #0B6B5F;
+    --color-primary-tiny: #DCEFEA;
+    --color-ink-green: #0F2A25;
+    --color-accent: #F2B33D;
+    --color-text: #10201C;
+    --color-text-muted: #566660;
+    --color-border: #DDE3DF;
+    --color-bg: #F3F5F2;
+    --color-surface: #FFFFFF;
+    --color-danger: #B42318;
+
+    --meal: #E4572E;
+    --meal-chip: #FBE3DA;
+    --transport: #2E86D3;
+    --transport-chip: #DCEAF9;
+    --services: #8E5BD6;
+    --services-chip: #EBE1F8;
+    --leisure: #E0A100;
+    --leisure-chip: #FBEFCB;
+    --health: #1B998B;
+    --health-chip: #D5EFEB;
+    --others: #6B7A75;
+    --others-chip: #E4E9E6;
+
+    --space: .25rem;
+    --space-1: .5rem;
+    --space-2: 0.75rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-6: 2.5rem;
+    --space-7: 3.5rem;
+
+    --radius-1: .75rem;
+    --radius-2: 1.25rem;
+    --radius-3: 999px;
+
+    --shadow-card: 0 8px 24px rgba(62,39,35,.08)
+    
+}
