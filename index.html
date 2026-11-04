@@ -7,6 +7,7 @@
     <title>Gestor de Gastos</title>
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/site.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,9 +15,28 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <h1>Welcome</h1>
+<body class="body" id="body">
+    <main class="main">
+        <div class="container">
+            <header class="header">
+                <a href="#body" class="logo">
+                    <img src="assets/icons/logo.png" alt="logo">
+                    Gastos
+                </a>
+                <fieldset class="money">
+                    <legend>Moneda</legend>
+                    <div class="group">
+                        <input class="money-radio" type="radio" name="money" id="pen" value="pen">
+                        <label for="pen" class="label money-active">PEN</label>
+                        <input class="money-radio" type="radio" name="money" id="usd" value="usd">
+                        <label for="usd" class="label">USD</label>
+                    </div>
+                </fieldset>
+            </header>
+            
+        </div>
 
+    </main>
     <script type="module" src="assets/js/main.js"></script>
 </body>
 
