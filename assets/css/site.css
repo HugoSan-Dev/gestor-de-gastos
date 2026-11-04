@@ -10,7 +10,9 @@
 .container{
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
 }
 .header{
     display: flex;
@@ -69,4 +71,14 @@
 .money-active{
     background-color: var(--color-primary);
     color: var(--color-surface) !important;
+}
+
+.h1{
+    font-family: 'Bricolage Grotesque';
+    font-weight: bold;
+    font-size: clamp(24px, 2vw, 40px);
+}
+.color-text-muted{
+    color: var(--color-text-muted);
+    font-size: clamp(14px, 2vw, 1rem);
 }
