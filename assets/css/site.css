@@ -1,5 +1,6 @@
 .body{
     background-color: var(--color-bg);
+    color: var(--color-text);
 }
 .main{
     max-width: 1440px;
@@ -132,4 +133,171 @@
 .card-type{
     font-weight: 400;
     font-size: clamp(12px,2vw,13px);
+}
+
+.movements-actions{
+    display: flex;
+    width: 100%;
+}
+.movements{
+    flex: 1;
+    max-width: 786px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-2);
+    border: 1px solid  var(--color-border);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.movements-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-title{
+    font-family: 'Bricolage Grotesque';
+    font-weight: bold;
+    font-size: clamp(20px,2vw,24px);
+}
+.label-search{
+    display: flex;
+    gap: var(--space-2);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    font-size: 15px;
+    height: 48px;
+    align-items: center;
+    padding: 0px 14px 0px 14px;
+    border-radius: var(--radius-3);
+    font-family: 'DM Sans';
+}
+.label-search > img{
+    height: 18px;
+    width: 18px;
+    object-fit: cover;
+
+}
+.input-search{
+    border: 0;
+    background-color: transparent;
+    font-family: inherit;
+    outline: none;
+}
+.filters{
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+.filters-item{
+    padding: 0px 1rem;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-3);
+    border: 1px solid var(--color-border);
+    font-size: clamp(13px,2vw,14px);
+    font-weight: 600;
+    cursor: pointer;
+}
+.filters-item-active{
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border: 0px;
+}
+.table{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    flex: 1;
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    border-top: 1px solid var(--color-bg);
+    padding: 1rem 0rem;
+}
+.row .column:nth-child(4){
+    max-width: 96px;
+    width: 100%;
+}
+.point{
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-3);
+}
+
+.row .column:nth-child(2){
+    flex: 1;
+}
+.row .column:nth-child(4){
+    font-weight: 600;
+    font-size: clamp(14px, 2vw, 1rem);
+    text-align: end;
+}
+.row .column:nth-child(5){
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-1);
+}
+.row .column:nth-child(5):hover{
+    background-color: var(--color-primary-tiny);
+}
+.description{
+    font-size: clamp(14px,2vw,1rem);
+    font-weight: 600;
+}
+.date{
+    font-size: clamp(12px, 2vw, 13px);
+    color: var(--color-text-muted);
+}
+.category{
+    font-size: clamp(12px, 2vw, 13px);
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: var(--radius-3);
+}
+
+.icon-delete{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.color-meal{
+    background-color: var(--meal);
+}
+.color-transport{
+    background-color: var(--transport);
+}
+.color-transport-chip{
+    background-color: var(--transport-chip);
+}
+.color-meal-chip{
+    background-color: var(--meal-chip);
+}
+.color-services{
+    background-color: var(--services);
+}
+.color-services-chip{
+    background-color: var(--services-chip);
+}
+.color-leisure{
+    background-color: var(--leisure);
+}
+.color-leisure-chip{
+    background-color: var(--leisure-chip);
+}
+.color-health{
+    background-color: var(--health);
+}
+.color-health-chip{
+    background-color: var(--health-chip);
 }
