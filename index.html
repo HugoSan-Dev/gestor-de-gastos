@@ -127,7 +127,39 @@
                         </div>
                     </div>
                 </section>
-
+                <form class="expense">
+                    <fieldset>
+                        <legend>Nuevo gasto</legend>
+                        <div class="group">
+                            <label for="description">Descripción</label>
+                            <input type="text" name="description" id="description" placeholder="Ej. Almuerzo menú">
+                        </div>
+                        <div class="group group-column">
+                            <div class="column">
+                                <label for="amount">Monto &lpar;S/&rpar;</label>
+                                <input type="number" name="amount" id="amount" placeholder="0.00">
+                            </div>
+                            <div class="column">
+                                <label for="date">Fecha</label>
+                                <input type="date" name="date" id="date">
+                            </div>
+                        </div>
+                        <div class="group">
+                            <label for="category">Categoría</label>
+                            <select name="category" id="category">
+                                <option value="1">Comida</option>
+                                <option value="2">Transporte</option>
+                                <option value="3">Servicios</option>
+                                <option value="4">Ocio</option>
+                                <option value="4">Salud</option>
+                            </select>
+                        </div>
+                        <label for="submit" class="btn-add">
+                            <img src="assets/icons/add.png" alt="Agregar Gasto">
+                            <input type="button" value="Agregar gasto" id="submit">
+                        </label>
+                    </fieldset>
+                </form>
             </div>
         </div>
 
