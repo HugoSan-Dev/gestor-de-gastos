@@ -88,42 +88,13 @@
                         <li class="filters-item" id="leisure">Ocio</li>
                         <li class="filters-item" id="health">Salud</li>
                     </ul>
-                    <div class="table">
-                        <div class="row">
-                            <div class="column">
-                                <div class="point color-meal"></div>
+                    <div class="table" id="table-movements">
+                        <div class="data-empty">
+                            <div class="icon-bg">
+                                <img src="assets/icons/carpet.png" alt="carpeta vacia">
                             </div>
-                            <div class="column">
-                                <p class="description">Almuerzo menú</p>
-                                <p class="date">03 nov 2026</p>
-                            </div>
-                            <div class="column">
-                                <p class="category color-meal-chip">Comida</p>
-                            </div>
-                            <div class="column">
-                                S/ 18.00
-                            </div>
-                            <div class="column">
-                                <img class="icon-delete" src="assets/icons/delete.png" alt="Borrar">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="column">
-                                <div class="point color-transport"></div>
-                            </div>
-                            <div class="column">
-                                <p class="description">Almuerzo menú</p>
-                                <p class="date">03 nov 2026</p>
-                            </div>
-                            <div class="column">
-                                <p class="category color-transport-chip">Comida</p>
-                            </div>
-                            <div class="column">
-                                S/ 18.00
-                            </div>
-                            <div class="column">
-                                <img class="icon-delete" src="assets/icons/delete.png" alt="Borrar">
-                            </div>
+                            <p>Aún no hay gastos este mes</p>
+                            <p>Registra el primero y verás aquí tu resumen.</p>
                         </div>
                     </div>
                 </section>
@@ -147,14 +118,14 @@
                         <div class="group">
                             <label for="category">Categoría</label>
                             <select name="category" id="category">
-                                <option value="1">Comida</option>
-                                <option value="2">Transporte</option>
-                                <option value="3">Servicios</option>
-                                <option value="4">Ocio</option>
-                                <option value="4">Salud</option>
+                                <option value="meal">Comida</option>
+                                <option value="transport">Transporte</option>
+                                <option value="services">Servicios</option>
+                                <option value="leisure">Ocio</option>
+                                <option value="health">Salud</option>
                             </select>
                         </div>
-                        <label for="submit" class="btn-add">
+                        <label id="register" for="submit" class="btn-add">
                             <img src="assets/icons/add.png" alt="Agregar Gasto">
                             <input type="button" value="Agregar gasto" id="submit">
                         </label>

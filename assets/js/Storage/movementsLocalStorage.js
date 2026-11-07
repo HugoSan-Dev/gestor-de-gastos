@@ -21,8 +21,10 @@ let movementsData = [
         createDate : "02 Nov. 2026"
     }
 ]
+
 const key = "MOVEMENTS"
 function initMovement(){
+    if (localStorage.getItem(key)?? false) return
     localStorage.setItem(key, JSON.stringify(movementsData))
 }
 
@@ -34,11 +36,15 @@ function getAllMovement(){
 }
 
 function registerMovement(...object){
-    const [id, description, amount, category, createDate] = object
     let data = localStorage.getItem(key)
+    let dataparse =JSON.parse(data)
+    dataparse.push(...object)
+
+    localStorage.setItem(key, JSON.stringify(dataparse))
+    
     console.log(data)
 }
 
 
-export {initMovement, getAllMovement}
+export {initMovement, getAllMovement, registerMovement}
 
