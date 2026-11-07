@@ -8,7 +8,7 @@ function formMovement(){
         const data = {
             id: generarId(),
             description: document.getElementById("description").value,
-            amount: document.getElementById("amount").value == "" ? 0 : "",
+            amount: document.getElementById("amount").value == "" ? 0 : 0,
             createDate: document.getElementById("date").value,
             category: document.getElementById("category").value,
         }
