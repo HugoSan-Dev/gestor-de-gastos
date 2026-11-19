@@ -104,15 +104,18 @@
                         <div class="group">
                             <label for="description">Descripción</label>
                             <input type="text" name="description" id="description" placeholder="Ej. Almuerzo menú">
+                            <small class="restriccion restriccion-description"></small>
                         </div>
                         <div class="group group-column">
                             <div class="column">
                                 <label for="amount">Monto &lpar;S/&rpar;</label>
                                 <input type="number" name="amount" id="amount" placeholder="0.00">
+                                <small class="restriccion restriccion-amount"></small>
                             </div>
                             <div class="column">
-                                <label for="date">Fecha</label>
-                                <input type="date" name="date" id="date">
+                                <label for="createDate">Fecha</label>
+                                <input type="date" name="createDate" id="createDate">
+                                <small class="restriccion restriccion-createDate"></small>
                             </div>
                         </div>
                         <div class="group">
@@ -124,6 +127,8 @@
                                 <option value="leisure">Ocio</option>
                                 <option value="health">Salud</option>
                             </select>
+                                <small class="restriccion restriccion-category"></small>
+
                         </div>
                         <label id="register" for="submit" class="btn-add">
                             <img src="assets/icons/add.png" alt="Agregar Gasto">
