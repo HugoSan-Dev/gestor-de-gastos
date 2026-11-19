@@ -302,6 +302,12 @@
     flex-direction: column;
     gap: 6px;
 }
+.restriccion{
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Bricolage Grotesque';
+}
 .group > label,
 .group .column > label{
     font-size: clamp(13px, 2vw, 14px);
