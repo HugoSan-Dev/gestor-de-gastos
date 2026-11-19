@@ -2,9 +2,7 @@
 export default function movementsComponent(data){
     const $movements = document.getElementById("table-movements")
     if (!$movements) return;
-
     const {id, description, createDate, category, amount} = data
-    console.log(data)
     let html = `
         <div class="row" id="${id}">
             <div class="column">

@@ -42,7 +42,6 @@ function registerMovement(...object){
 
     localStorage.setItem(key, JSON.stringify(dataparse))
     
-    console.log(data)
 }
 
 
