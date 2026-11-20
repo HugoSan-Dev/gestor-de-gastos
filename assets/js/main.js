@@ -1,4 +1,4 @@
-import { allMovementController, registerMovementController } from '../js/controllers/movementsControllers.js';
+import { allMovementController, registerMovementController, deleteMovementController, showCategoryMovementsControllers } from '../js/controllers/movementsControllers.js';
 import { initMovement } from './Storage/movementsLocalStorage.js';
 import { generarId } from './utils.js';
 import { required, maxLength } from './validator.js';
@@ -8,6 +8,7 @@ function formMovement() {
     $register_HTML.addEventListener('click', () => {
         const $restriccion = document.querySelectorAll(".restriccion")
         if (!$restriccion) return console.log("no existen HTML de restricciones")
+        $restriccion.forEach(element => element.textContent = "")
 
         const description = document.getElementById('description')
         const amount = document.getElementById("amount")
@@ -50,16 +51,44 @@ function formMovement() {
         amount.value = ""
         createDate.value = ""
 
-        $restriccion.forEach(element => element.textContent = "")
-
         
     })
+}
+
+function deleteMovementForm(){
+    const $btnDelete = document.querySelectorAll(".btn-delete");
+    if(!$btnDelete) return 
+
+    $btnDelete.forEach(btn => {
+        btn.addEventListener('click', () => {
+            console.log(btn)
+            const id = btn.id
+            if (!id) return end
+            deleteMovementController(id)
+        })
+    })
+}
+
+function filterCategoryMovement(){
+    let $filtersItems = document.querySelectorAll(".filters-item")
+    if(!$filtersItems) return
+    $filtersItems.forEach(filter =>{
+        filter.addEventListener("click", () => {
+            const category = filter.id
+            if (category !== "all") return showCategoryMovementsControllers(category)
+            allMovementController()
+        })
+    })
+
+
 }
 
 function initMethods() {
     initMovement()
     allMovementController()
     formMovement()
+    deleteMovementForm()
+    filterCategoryMovement()
 }
 
 

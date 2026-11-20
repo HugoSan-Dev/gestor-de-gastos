@@ -18,7 +18,7 @@ export default function movementsComponent(data){
             <div class="column">
                 S/ ${amount.toFixed(2,0)}
             </div>
-            <div class="column">
+            <div id="${id}" class="column btn-delete">
                 <img class="icon-delete" src="assets/icons/delete.png" alt="Borrar">
             </div>
         </div>
