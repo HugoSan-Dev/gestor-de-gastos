@@ -36,6 +36,6 @@
     --radius-2: 1.25rem;
     --radius-3: 999px;
 
-    --shadow-card: 0 8px 24px rgba(62,39,35,.08)
-    
+    --shadow-card: 0 8px 24px rgba(62,39,35,.08);
+    --shadow-modal: 0 8px 24px 10px rgba(62,39,35,.08);
 }
