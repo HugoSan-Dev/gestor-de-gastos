@@ -1,28 +1,48 @@
 
 export default function movementsComponent(data){
     const $movements = document.getElementById("table-movements")
-    if (!$movements) return;
+    const $modal = document.getElementById("modal-delete")
+    if (!$movements || !$modal) return;
+    
     const {id, description, createDate, category, amount} = data
-    let html = `
-        <div class="row" id="${id}">
+    
+    const template = document.createElement("template")
+    template.innerHTML = `
+        <div class="row" id="">
             <div class="column">
-                <div class="point color-${category}"></div>
+                <div class="point"></div>
             </div>
             <div class="column">
-                <p class="description">${description}</p>
-                <p class="date">${createDate}</p>
+                <p class="description"></p>
+                <p class="date"></p>
             </div>
             <div class="column">
-                <p class="category color-${category}-chip">${category}</p>
+                <p class="category"></p>
             </div>
-            <div class="column">
-                S/ ${amount.toFixed(2,0)}
-            </div>
-            <div id="${id}" class="column btn-delete">
+            <div class="column amount"></div>
+            <div id="" class="column btn-delete">
                 <img class="icon-delete" src="assets/icons/delete.png" alt="Borrar">
             </div>
         </div>
-    `;
-    $movements.insertAdjacentHTML("afterbegin", html)
+    `.trim();
 
+    const card = template.content.firstElementChild;
+    card.id = id
+    
+    card.querySelector(".description").textContent = description
+    card.querySelector(".date").textContent = createDate
+    card.querySelector(".category").textContent = category
+    card.querySelector(".amount").textContent =` S/${amount}`
+
+    card.querySelector(".point").classList.add(`color-${category}`)
+    card.querySelector(".category").classList.add(`color-${category}-chip`)
+
+    card.querySelector(".btn-delete").addEventListener("click",() =>{
+        $modal.dataset.id = id
+        $modal.showModal();
+    })
+    console.log()
+    $movements.prepend(card)
+
+    
 }

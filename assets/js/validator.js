@@ -1,6 +1,5 @@
 
 function required(campo){
-    console.log(campo)
     if (campo.trim()) {
         return "";
     }
@@ -8,7 +7,7 @@ function required(campo){
 }
 
 function maxLength(campo, limit){
-    return [...campo.replace(/\s+/g,'')].length > limit ? `Maximo: ${limit} caracteres` : ""
+    return [...campo.replace(/\s+/g,'')].length > limit ? `Máximo: ${limit} caracteres` : ""
 }
 
 

@@ -1,4 +1,4 @@
-import { initMovement, getAllMovement, registerMovement,deleteMovement, findCategoryMovement } from "../Storage/movementsLocalStorage.js";
+import { getAllMovement, registerMovement,deleteMovement, findCategoryMovement } from "../Storage/movementsLocalStorage.js";
 import movementsComponent from "../components/movementsComponents.js";
 
 function allMovementController(){
@@ -40,7 +40,7 @@ function showCategoryMovementsControllers(category){
 }
 
 function registerMovementController(form){
-    registerMovement(form)
+    return registerMovement(form)
 }
 
 function deleteMovementController(id){
