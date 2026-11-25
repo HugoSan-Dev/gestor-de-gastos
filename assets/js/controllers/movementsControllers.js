@@ -44,7 +44,8 @@ function registerMovementController(form){
 }
 
 function deleteMovementController(id){
-    deleteMovement(id)
+    let elementDelete = deleteMovement(id)
+    return elementDelete
 }
 
 

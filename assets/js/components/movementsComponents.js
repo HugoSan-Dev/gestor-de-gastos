@@ -26,23 +26,23 @@ export default function movementsComponent(data){
         </div>
     `.trim();
 
-    const card = template.content.firstElementChild;
-    card.id = id
+    const row = template.content.firstElementChild;
+    row.id = id
     
-    card.querySelector(".description").textContent = description
-    card.querySelector(".date").textContent = createDate
-    card.querySelector(".category").textContent = category
-    card.querySelector(".amount").textContent =` S/${amount}`
+    row.querySelector(".description").textContent = description
+    row.querySelector(".date").textContent = createDate
+    row.querySelector(".category").textContent = category
+    row.querySelector(".amount").textContent =` S/ ${amount.toFixed(2)}`
 
-    card.querySelector(".point").classList.add(`color-${category}`)
-    card.querySelector(".category").classList.add(`color-${category}-chip`)
+    row.querySelector(".point").classList.add(`color-${category}`)
+    row.querySelector(".category").classList.add(`color-${category}-chip`)
 
-    card.querySelector(".btn-delete").addEventListener("click",() =>{
+    row.querySelector(".btn-delete").addEventListener("click",() =>{
+        $modal.querySelector('.modal-delete-description').textContent = `${description} - S/ ${amount.toFixed(2)}. Esta acción no se puede deshacer.`
         $modal.dataset.id = id
         $modal.showModal();
     })
-    console.log()
-    $movements.prepend(card)
+    $movements.prepend(row)
 
     
 }

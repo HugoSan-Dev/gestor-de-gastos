@@ -18,13 +18,19 @@ function findByIdMovement(id){
     let data = localStorage.getItem(key)
     if(!data) return console.log("Error: No se pudo obtener Movimientos - LS")
     const movements = JSON.parse(data)
+
+    let found = ""
     for(const key in movements) {
         const dataID = movements[key].id
         if(dataID == id){
+            found = movements[key]
             movements.splice(key,1)
         }
     }
     localStorage.setItem(key,JSON.stringify(movements))
+
+    return found
+
 }
 
 function findCategoryMovement(category){
@@ -56,10 +62,12 @@ function registerMovement(...object){
 }
 
 function deleteMovement(id){
-    
     const $element = document.getElementById(id)
     $element.remove()
-    findByIdMovement(id)
+
+    let found = findByIdMovement(id)
+    console.log(found)
+    return found
 }
 
 
