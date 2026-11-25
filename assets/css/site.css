@@ -639,7 +639,8 @@
         height: 100dvh;
         border: unset;
         border-radius: unset;
-
+        transform: translateY(0%);
+        top: 0;
     }
     .movements-header{
         flex-direction: column;
