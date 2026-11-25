@@ -119,12 +119,32 @@ function activeCategoryElement(category) {
     document.getElementById(category).classList.add("filters-item-active")
 }
 
+function showFormMobile(){
+    const btnAddMobile = document.querySelector(".btn-add-mobile")
+    const $expense = document.querySelector(".expense")
+    btnAddMobile.addEventListener("click", () =>{
+        console.log($expense)
+        $expense.classList.add("expense-show-mobile")
+    })
+}
+
+function hiddenFormMobile(){
+    const btnExitMobile = document.querySelector(".btn-exit")
+    const $expense = document.querySelector(".expense")
+    btnExitMobile.addEventListener("click", () =>{
+        console.log($expense)
+        $expense.classList.remove("expense-show-mobile")
+    })
+}
+
 function initMethods() {
     initMovement()
     allMovementController()
     formMovement()
     deleteMovementForm()
     filterCategoryMovement()
+    showFormMobile()
+    hiddenFormMobile()
 }
 
 
