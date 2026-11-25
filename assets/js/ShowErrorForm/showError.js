@@ -14,6 +14,7 @@ function showError(schema, formElement) {
             }
         }
     };
+    
     if(restricted) {
         restricted = false
         return true

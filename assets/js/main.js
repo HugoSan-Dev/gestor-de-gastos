@@ -61,6 +61,9 @@ function formMovement() {
             return
         }
         $formExpenses.reset()
+
+        const $expense = document.querySelector(".expense")
+        $expense.classList.remove("expense-show-mobile")
     })
 }
 
