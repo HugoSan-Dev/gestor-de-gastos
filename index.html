@@ -76,7 +76,8 @@
                         <form action="" class="search-movements">
                             <label for="search" class="label-search">
                                 <img src="assets/icons/search.png" alt="buscador de gastos">
-                                <input class="input-search" type="search" name="search" id="search" placeholder="Buscar gasto">
+                                <input class="input-search" type="search" name="search" id="search"
+                                    placeholder="Buscar gasto">
                             </label>
                         </form>
                     </div>
@@ -100,10 +101,17 @@
                 </section>
                 <form class="expense">
                     <fieldset>
-                        <legend>Nuevo gasto</legend>
+                        <div class="form-header">
+                            <div class="btn-exit">
+                                <img src="assets/icons/arrow-left.png" alt="Flecha regresar">
+                            </div>
+                            <legend>Nuevo gasto</legend>
+
+                        </div>
                         <div class="group">
                             <label for="description">Descripción</label>
-                            <input class="input-clean" type="text" name="description" id="description" placeholder="Ej. Almuerzo menú">
+                            <input class="input-clean" type="text" name="description" id="description"
+                                placeholder="Ej. Almuerzo menú">
                             <small class="restriccion restriccion-description"></small>
                         </div>
                         <div class="group group-column">
@@ -127,7 +135,7 @@
                                 <option value="leisure">Ocio</option>
                                 <option value="health">Salud</option>
                             </select>
-                                <small class="restriccion restriccion-category"></small>
+                            <small class="restriccion restriccion-category"></small>
 
                         </div>
                         <label id="register" for="submit" class="btn-add">
@@ -149,6 +157,10 @@
         </div>
     </dialog>
     <div class="toast">
+    </div>
+    <div id="register" for="submit" class="btn-add btn-add-mobile">
+        <img src="assets/icons/add.png" alt="Agregar Gasto">
+        <p>Agregar gasto</p>
     </div>
     <script type="module" src="assets/js/main.js"></script>
 </body>
