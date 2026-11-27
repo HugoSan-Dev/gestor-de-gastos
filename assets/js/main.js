@@ -2,6 +2,8 @@ import { allMovementController, registerMovementController, deleteMovementContro
 import { initMovement } from './Storage/movementsLocalStorage.js';
 import { generarId } from './utils.js';
 import { required, maxLength } from './validator.js';
+import { initBalance, UpdateBalance } from './Storage/balanceLocalStorage.js';
+import { showBalance } from './controllers/balanceController.js';
 import showError from './ShowErrorForm/showError.js';
 import movementsComponent from './components/movementsComponents.js';
 import toastComponent from './components/toastComponent.js';
@@ -44,7 +46,12 @@ function formMovement() {
             createDate: $createDate.value
         }
 
+        let deductBalance = UpdateBalance(validated.amount, 'decrement')
+        if (deductBalance == "No hay saldo") return console.log(`deductBalance: No se registrara un movimiento`);
+        
         const success = registerMovementController(validated)
+        showBalance()
+
         if (success == 1) {
             console.log("Se registro cone exito - mostrar toast success")
             movementsComponent(validated)
@@ -142,6 +149,9 @@ function hiddenFormMobile(){
 
 function initMethods() {
     initMovement()
+    initBalance()
+
+    showBalance()
     allMovementController()
     formMovement()
     deleteMovementForm()

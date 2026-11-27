@@ -5,4 +5,14 @@ const fechaFormateada = (fecha) => new Date(`${fecha}T00:00:00`).toLocaleDateStr
     month: "short",
     year: "numeric"
 })
-export { generarId, hoy, fechaFormateada };
+
+const currencyFormatter = (amount, currency = 'PEN') => {
+    return new Intl.NumberFormat('es-PE', {
+        style: 'currency',
+        currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(amount);
+};
+
+export { generarId, hoy, fechaFormateada,currencyFormatter };

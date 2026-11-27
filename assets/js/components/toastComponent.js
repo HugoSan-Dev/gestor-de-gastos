@@ -1,10 +1,14 @@
 import movementsComponent from "./movementsComponents.js"
 import { registerMovementController } from "../controllers/movementsControllers.js"
-export default function toastComponent(data, elementRecovery = "none", component){
+import { UpdateBalance } from "../Storage/balanceLocalStorage.js"
+import { showBalance } from "../controllers/balanceController.js"
+
+export default function toastComponent(data, movement){
     const $toast = document.querySelector(".toast")
     if(!$toast) return
 
     const {id, icon, type , description, recover = "none"} = data
+    console.log(data)
 
     const template = document.createElement("template")
     template.innerHTML = `
@@ -27,11 +31,13 @@ export default function toastComponent(data, elementRecovery = "none", component
 
     const toasteDeshacer = toast.querySelector(".toast-deshacer")
     if(!toasteDeshacer) return
-
+    UpdateBalance(movement.amount,'increment')
+    showBalance()
     toasteDeshacer.addEventListener("click", () =>{
-        if(!elementRecovery == "none") return end
-        registerMovementController(elementRecovery)
-        movementsComponent(elementRecovery)
+        registerMovementController(movement)
+        movementsComponent(movement)
+        UpdateBalance(movement.amount,'decrement')
+        showBalance()
         toast.remove()
     })
     

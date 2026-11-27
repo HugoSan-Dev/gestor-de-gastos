@@ -30,7 +30,11 @@ function findByIdMovement(id){
     localStorage.setItem(key,JSON.stringify(movements))
 
     return found
-
+}
+function totalMovements(){
+    let data = localStorage.getItem(key)
+    if(!data) return console.log("Error: No se pudo obtener Movimientos - LS");
+    return JSON.parse(data).length
 }
 
 function findCategoryMovement(category){
@@ -71,5 +75,5 @@ function deleteMovement(id){
 }
 
 
-export {initMovement, getAllMovement, registerMovement, deleteMovement,findCategoryMovement}
+export {initMovement, getAllMovement, registerMovement, deleteMovement,findCategoryMovement, totalMovements}
 
